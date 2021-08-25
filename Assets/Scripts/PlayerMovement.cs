@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // bd.AddForce(0,100,500);
     }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -19,19 +20,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
-            bd.AddForce(sideways * Time.deltaTime, 0, 0);
+            bd.AddForce(sideways * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         else if(Input.GetKey("a") || Input.GetKey("left"))
         {
-            bd.AddForce(-sideways * Time.deltaTime, 0, 0);
+            bd.AddForce(-sideways * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        //else if (Input.GetKey("w") || Input.GetKey("up"))
-        //{
-        //    bd.AddForce(0, 0, forward * Time.deltaTime);
-        //}
-        //else if (Input.GetKey("s") || Input.GetKey("down"))
-        //{
-        //    bd.AddForce(0, 0, -forward * Time.deltaTime);
-        //}
     }
 }
