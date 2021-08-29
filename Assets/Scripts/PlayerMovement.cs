@@ -22,9 +22,13 @@ public class PlayerMovement : MonoBehaviour
         {
             bd.AddForce(sideways * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        else if(Input.GetKey("a") || Input.GetKey("left"))
+        if(Input.GetKey("a") || Input.GetKey("left"))
         {
             bd.AddForce(-sideways * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        }
+        if (bd.position.y < -1f)
+        {
+            FindObjectOfType<Gamemanager>().GameOver();
         }
     }
 }
