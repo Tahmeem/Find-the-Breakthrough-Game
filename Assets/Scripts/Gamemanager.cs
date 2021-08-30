@@ -18,4 +18,9 @@ public class Gamemanager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void winLevel()
+    {
+        Debug.Log("Level Won");
+    }
 }
