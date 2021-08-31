@@ -5,6 +5,8 @@ public class Gamemanager : MonoBehaviour
 {
     bool gameEnd = false;
     public float delay = 1f;
+    public GameObject completeLevelUI;
+
     public void GameOver()
     {
         if (gameEnd == false)
@@ -21,6 +23,6 @@ public class Gamemanager : MonoBehaviour
 
     public void winLevel()
     {
-        Debug.Log("Level Won");
+        completeLevelUI.SetActive(true);
     }
 }
