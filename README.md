@@ -4,7 +4,8 @@ You are a ball rolling down a platform and you need to fit through all the holes
 
 # How to play
 
-The game has been published on Unity play. Also Builds folder has the WebGL build.
+The game has been published on Unity play.
+
 [Find the Breakthrough](https://play.unity.com/mg/other/find-the-breakthrough) 
 
 # Looking at Build
