@@ -5,14 +5,14 @@ public class Gamemanager : MonoBehaviour
 {
     bool gameEnd = false;
     public float delay = 1f;
-    public GameObject completeLevelUI;
+    public GameObject completeLevelUI,gameRestart;
 
     public void GameOver()
     {
         if (gameEnd == false)
         {
             gameEnd = true;
-            Debug.Log("Game Over!");
+            gameRestart.SetActive(true);
             Invoke("Restart", delay);
         }
     }
